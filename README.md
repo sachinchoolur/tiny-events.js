@@ -52,15 +52,21 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
 import $ from 'tinyevents';
 
 
-$('.btn').on('click.bg hover.bg', () => {
-    document.body.style.backgroundColor = 'red';
+const getRandomColor = () =>
+  "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+$('.change-bg').on('click.sample mouseover.sample', () => {
+    document.body.style.backgroundColor = getRandomColor();
 });
-$('.btn').on('click.color', () => {
-    document.body.style.backgroundColor = 'red';
+
+$('.change-color').on('click.sample', () => {
+    document.body.style.color = getRandomColor();
 });
-$('.remove-event').on('click', () => {
-    $('#btn').off('.bg .color');
+
+$('.remove-btn').on('click', () => {
+    $('.change-bg, .change-color').off('.sample');
 });
+
 
 ```
 
@@ -78,7 +84,7 @@ Attach an event handler function for one or more events to the selected elements
 
 import tinyEvents from 'tinyevents';
 
-tinyEvents('.btn').on('click.bg hover.bg', () => {
+tinyEvents('.btn').on('click.bg mouseover.bg', () => {
     document.body.style.backgroundColor = 'red';
 });
 
