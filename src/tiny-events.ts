@@ -1,6 +1,6 @@
 /**
  * TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+).
- * Supports jQuery like syntax. just 80 bytes gzipped.
+ * Supports jQuery like syntax. just 1 kb gzipped.
  * Author - Sachin Neravath
  */
 
@@ -65,6 +65,9 @@ export class TinyEvents {
     }
 
     static getIdFromSelector(selector: string): string | undefined {
+        if (selector.indexOf(',') > -1) {
+            return;
+        }
         const selectors = selector.split(' ');
         const lastSelector = selectors[selectors.length - 1];
         const fl = lastSelector.substring(0, 1);
