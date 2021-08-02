@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+    <head>
         <script src="../dist/tiny-events.umd.js"></script>
     </head>
-	<body>
-        <button class="btn">Click</button>
-        <button class="remove">Remove click</button>
+    <body>
+        <button class="change-bg">Change background color</button>
+        <button class="change-color">Change color</button>
+
+        <button class="remove-btn">Remove click</button>
+
+        <h1>Tiny-events.js</h1>
+        <p>
+            TinyEvents is a tiny, framework-agnostic, event utility library for
+            modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb
+            gzipped.
+        </p>
         <script>
-            tinyEvents('.btn').on('click', () => {
-                console.log('calling')
-            })
-            tinyEvents('.remove').on('click', () => {
-                tinyEvents('.btn').off('click')
-            })
+            const getRandomColor = () =>
+                '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            tinyEvents('.change-bg').on('click.sample mouseover.sample', () => {
+                document.body.style.backgroundColor = getRandomColor();
+            });
+
+            tinyEvents('.change-color').on('click.sample', () => {
+                document.body.style.color = getRandomColor();
+            });
+
+            tinyEvents('.remove-btn').on('click', () => {
+                tinyEvents('.change-bg, .change-color').off('.sample');
+            });
         </script>
     </body>
 </html>
