@@ -11,6 +11,8 @@ import path from 'path';
 
 const pkg = require('./package.json');
 
+const getRollupOutputFile = (fileName) => `dist/${fileName}`;
+
 const libraryName = 'tiny-events';
 const libraryFileName = 'index';
 export default [
@@ -18,12 +20,16 @@ export default [
         input: `src/${libraryFileName}.ts`,
         output: [
             {
-                file: pkg.main,
+                file: getRollupOutputFile(pkg.main),
                 name: camelCase(libraryName),
                 format: 'umd',
                 sourcemap: true,
             },
-            { file: pkg.module, format: 'es', sourcemap: true },
+            {
+                file: getRollupOutputFile(pkg.module),
+                format: 'es',
+                sourcemap: true,
+            },
         ],
         // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
         external: [],
@@ -57,7 +63,7 @@ export default [
         input: `src/${libraryFileName}.ts`,
         output: [
             {
-                file: pkg.min,
+                file: getRollupOutputFile(pkg.min),
                 name: camelCase(libraryName),
                 format: 'umd',
                 sourcemap: true,
