@@ -1,0 +1,86 @@
+{
+  "name": "tiny-events.js",
+  "description": "TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+). Supports jQuery like syntax. just 80 bytes gzipped.",
+  "version": "0.0.1",
+  "browserslist": [
+    "defaults"
+  ],
+  "repository": "https://github.com/sachinchoolur/tiny-events.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name" : "Sachin Neravath",
+    "email" : "sachin.neravath@gmail.com"
+  },
+  "main": "dist/tiny-events.umd.js",
+  "min": "dist/tiny-events.min.js",
+  "module": "dist/tiny-events.es5.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prestart": "npm run clean",
+    "start": "http-server -p 5757 & rollup -c rollup.config.ts -w",
+    "prebuild": "npm run clean",
+    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
+    "build:preview": "npm run build -D -F",
+    "clean": "shx rm -rf dist",
+    "clean:install": "shx rm -rf package-lock.json node_modules ",
+    "lint": "npm run -s lint:scripts npm run -s lint:markdown",
+    "lint:scripts": "eslint 'src/**/*.ts'",
+    "lint:markdown": "markdownlint *.md content/**/*.md",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "env": "env",
+    "precheck": "npm version"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14",
+    "@babel/core": "^7.14",
+    "@babel/preset-env": "^7.14",
+    "@fullhuman/postcss-purgecss": "^4.0",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "auto-changelog": "^2.3.0",
+    "autoprefixer": "^10.2",
+    "clipboard": "^2.0",
+    "eslint": "7.30.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "exec-bin": "^1.0.0",
+    "jest": "^27.0.6",
+    "lodash.camelcase": "^4.3.0",
+    "markdownlint-cli": "^0.27",
+    "mermaid": "^8.10.2",
+    "path": "^0.12.7",
+    "postcss": "^8.3",
+    "postcss-cli": "^8.3",
+    "prettier": "2.3.2",
+    "purgecss-whitelister": "^2.4",
+    "rollup": "^2.52.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-license": "^2.5.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "shx": "^0.3.3",
+    "stylelint": "^13.13",
+    "stylelint-config-standard": "^22.0",
+    "ts-jest": "^27.0.3"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.14.5",
+    "@types/jquery": "^3.5.5",
+    "jquery": "^3.6.0"
+  }
+}
