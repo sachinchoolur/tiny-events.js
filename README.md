@@ -47,25 +47,47 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
 
 # Usage example
 
+```html
+<button class="change-bg">Change background color</button>
+<button class="change-color">Change color</button>
+<button class="remove-btn">Remove click</button>
+<span id="color-code">#FFF</span>
+```
 ```js
 
-import $ from 'tinyevents';
-
+import tinyEvents from 'tinyevents';
 
 const getRandomColor = () =>
   "#" + Math.floor(Math.random() * 16777215).toString(16);
 
-$('.change-bg').on('click.sample mouseover.sample', () => {
-    document.body.style.backgroundColor = getRandomColor();
+const triggerColorChange = (color) => {
+  // Custom events demo
+  tinyEvents("#color-code").trigger("color-change", {
+    color
+  });
+};
+
+tinyEvents(".change-bg").on("click.sample", () => {
+  const color = getRandomColor();
+  document.body.style.backgroundColor = color;
+  triggerColorChange(color);
 });
 
-$('.change-color').on('click.sample', () => {
-    document.body.style.color = getRandomColor();
+tinyEvents(".change-color").on("click.sample", () => {
+  const color = getRandomColor();
+  document.body.style.color = color;
+  triggerColorChange(color);
 });
 
-$('.remove-btn').on('click', () => {
-    $('.change-bg, .change-color').off('.sample');
+tinyEvents(".remove-btn").on("click", () => {
+  tinyEvents(".change-bg, .change-color").off(".sample");
 });
+
+tinyEvents("#color-code").on("color-change", (event) => {
+  const { color } = event.detail;
+  document.getElementById("color-code").innerHTML = color;
+});
+
 
 
 ```
@@ -82,13 +104,13 @@ Attach an event handler function for one or more events to the selected elements
 
 ```js
 
-import tinyEvents from 'tinyevents';
+import $ from 'tinyevents';
 
-tinyEvents('.btn').on('click.bg mouseover.bg', () => {
+$('.btn').on('click.bg mouseover.bg', () => {
     document.body.style.backgroundColor = 'red';
 });
 
-tinyEvents('.btn').on('my-custom-event', (e) => {
+$('.btn').on('my-custom-event', (e) => {
     console.log(e.detail)
 });
 ```
