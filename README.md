@@ -18,6 +18,8 @@ TinyEvents is a tiny, framework-agnostic, event utility library for modern brows
 - Attach event listeners to dynamically added element
 - And more. Just 1 kb
 
+#### Codepen Demo - https://codepen.io/sachinchoolur/pen/zYwaMqy
+
 
 # Installation
 
