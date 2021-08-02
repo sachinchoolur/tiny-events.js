@@ -57,17 +57,7 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
 
 import tinyEvents from 'tinyevents';
 
-const getRandomColor = () =>
-  "#" + Math.floor(Math.random() * 16777215).toString(16);
-
-const triggerColorChange = (color) => {
-  // Custom events demo
-  tinyEvents("#color-code").trigger("color-change", {
-    color
-  });
-};
-
-tinyEvents(".change-bg").on("click.sample", () => {
+tinyEvents(".change-bg").on("click.sample mouseover.sample", () => {
   const color = getRandomColor();
   document.body.style.backgroundColor = color;
   triggerColorChange(color);
@@ -88,7 +78,16 @@ tinyEvents("#color-code").on("color-change", (event) => {
   document.getElementById("color-code").innerHTML = color;
 });
 
+function getRandomColor() {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
 
+function triggerColorChange(color) {
+  // Custom events demo
+  tinyEvents("#color-code").trigger("color-change", {
+    color
+  });
+}
 
 ```
 
