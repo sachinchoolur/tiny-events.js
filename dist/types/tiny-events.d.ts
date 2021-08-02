@@ -1,3 +1,8 @@
+/**
+ * TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+).
+ * Supports jQuery like syntax. just 1 kb gzipped.
+ * Author - Sachin Neravath
+ */
 export declare type Selector = EventTarget | NodeList | string | null;
 export declare type TinyEventsElements = EventTarget | NodeList | null;
 export declare type TinyEventsElement = EventTarget | Node | null;

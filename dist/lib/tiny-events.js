@@ -1,4 +1,9 @@
 "use strict";
+/**
+ * TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+).
+ * Supports jQuery like syntax. just 1 kb gzipped.
+ * Author - Sachin Neravath
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TinyEvents = void 0;
 // Custom event polyfill for old browsers
@@ -30,6 +35,9 @@ var TinyEvents = /** @class */ (function () {
         return this;
     }
     TinyEvents.getIdFromSelector = function (selector) {
+        if (selector.indexOf(',') > -1) {
+            return;
+        }
         var selectors = selector.split(' ');
         var lastSelector = selectors[selectors.length - 1];
         var fl = lastSelector.substring(0, 1);
