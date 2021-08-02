@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "prettier"],
+    "rules": {
+        "consistent-return": 0,
+        "no-bitwise": 0,
+        "prettier/prettier": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-explicit-any": "error"
+    }
+}
