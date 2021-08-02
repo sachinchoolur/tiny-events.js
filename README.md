@@ -45,11 +45,6 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
 
 # Usage example
 
-```html
-<button type="button" class="btn change-bg-btn">Change background</div>
-<button type="button" class="btn change-color-btn">Change color</div>
-<button type="button" id="change-color-bg" class="btn">Change color and background</div>
-```
 ```js
 
 import $ from 'tinyevents';
@@ -62,7 +57,7 @@ $('.btn').on('click.color', () => {
     document.body.style.backgroundColor = 'red';
 });
 $('.remove-event').on('click', () => {
-    $('#btn').off('.btn');
+    $('#btn').off('.bg .color');
 });
 
 ```
