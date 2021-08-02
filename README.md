@@ -8,7 +8,7 @@
 
 # TinyEvents
 
-TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+). Supports jQuery like syntax. just 80 bytes gzipped.
+TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb gzipped.
 
 - Event namespace support
 - Works with collection of elements
@@ -16,7 +16,7 @@ TinyEvents is a tiny, framework-agnostic, event utility library for modern brows
 - Add or remove multiple events at a time.
 - Easy event delegation
 - Attach event listeners to dynamically added element
-- And more. Just 80 bytes
+- And more. Just 1 kb
 
 
 # Installation
@@ -24,11 +24,11 @@ TinyEvents is a tiny, framework-agnostic, event utility library for modern brows
 TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the following method to download tinyEvents
 
 -   [NPM](https://www.npmjs.com/) - NPM is a package manager for the JavaScript
-    programming language. You can install `tinyevents` using the following
+    programming language. You can install `tiny-events.js` using the following
     command
 
     ```sh
-    npm install tinyevents
+    npm install tiny-events.js
     ```
 
 -   [YARN](https://yarnpkg.com/) - Yarn is another popular package manager for
@@ -36,7 +36,7 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
     of NPM
 
     ```sh
-    yarn add tinyevents
+    yarn add tiny-events.js
     ```
 
 -   [GitHub](https://github.com/sachinchoolur/tinyevents/archive/master.zip) -
