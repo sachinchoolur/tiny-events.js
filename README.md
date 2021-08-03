@@ -8,7 +8,7 @@
 
 # TinyEvents
 
-TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb gzipped.
+TinyEvents is a tiny event utility library for modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb gzipped.
 
 - Event namespace support
 - Works with collection of elements
@@ -135,7 +135,7 @@ Remove event handlers.
 
 ```js
 
-$('.btn').on('click.bg hover.bg', () => {
+tinyEvents('.btn').on('click.bg hover.bg', () => {
     document.body.style.backgroundColor = 'red';
 });
 
@@ -150,10 +150,10 @@ tinyEvents('.btn').off('.bg');
 tinyEvents('.btn').off('click');
 
 // Another example with multiple namespaces
-$('.btn').on('click.abc', () => {
+tinyEvents('.btn').on('click.abc', () => {
     document.body.style.color = 'red';
 });
-$('.btn').on('click.xyz', () => {
+tinyEvents('.btn').on('click.xyz', () => {
     document.body.style.backgroundColor = 'yellow';
 });
 

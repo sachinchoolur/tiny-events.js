@@ -1,6 +1,6 @@
 {
   "name": "tiny-events.js",
-  "description": "TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+). Supports jQuery like syntax. just 1 kb gzipped.",
+  "description": "TinyEvents is a tiny event utility library for modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb gzipped.",
   "version": "0.0.1",
   "browserslist": [
     "defaults"
