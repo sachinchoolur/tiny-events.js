@@ -21,6 +21,19 @@ describe('on, off, and trigger methods', () => {
         const $ = tinyEvents('#btn-does-not-exist').on('click', () => {});
         expect($).toBeInstanceOf(TinyEvents);
     });
+    test('should be able to attach event to multiple elements', () => {
+        document.body.innerHTML = `<button class="btn">Button 1</button>
+        <button id="btn-2">Button 2</button>`;
+
+        let times = 0;
+        tinyEvents('.btn, #btn-2').on('click', () => {
+            times++;
+        });
+        userEvent.click(screen.getByText('Button 1'));
+        userEvent.click(screen.getByText('Button 2'));
+
+        expect(times).toBe(2);
+    });
     test('should be able to attach event listeners that works only once', () => {
         document.body.innerHTML = `<button class="btn">Button 2</button>
         <button class="btn">Button 3</button>`;
