@@ -1,5 +1,5 @@
 /**
- * TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+).
+ * TinyEvents is a tiny event utility library for modern browsers(IE 11+).
  * Supports jQuery like syntax. just 1 kb gzipped.
  * Author - Sachin Neravath
  */
