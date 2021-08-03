@@ -201,3 +201,12 @@ tinyEvents('.btn').trigger('my-custom-event', {
   purpose: 'some text'
 });
 ```
+
+## Story
+
+I built the initial version of tinyEvents during the development of [lightGallery](http://lightgalleryjs.com/).
+lightGallery 2.0 is completely re-written from scratch in vanilla JavaScript which was dependent on jQuery earlier.
+It was very difficult to keep track of all event listeners, making use of event delegation, and using custom events in vanilla JS while it is very easy with jQuery.
+So I wrote this tiny library which supports jQuery-like syntax and functionalities and is still less than 1 kb. 
+
+P.S. I'm working on an other [tool](https://twitter.com/sachinchoolur/status/1405524128908546057) that automatically finds and replaces jQuery methods with vanilla javascript methods. Watch the repo to get notified
