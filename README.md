@@ -16,7 +16,7 @@
 
 TinyEvents is a tiny event utility library for modern browsers(IE 11+). Supports jQuery like syntax. Just 1 kb gzipped.
 
-- Event namespace support
+- Event namespace support - Easily remove event handlers
 - Works with collection of elements
 - Custom events support
 - Add or remove multiple events at a time.
@@ -47,7 +47,7 @@ TinyEvents is available on NPM, Yarn, and GitHub. You can use any of the followi
     yarn add tiny-events.js
     ```
 
--   [GitHub](https://github.com/sachinchoolur/tinyevents/archive/master.zip) -
+-   [GitHub](https://codeload.github.com/sachinchoolur/tiny-events.js/zip/main) -
     You can also directly download tinyevents from GitHub
 
 
