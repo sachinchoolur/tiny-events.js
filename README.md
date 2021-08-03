@@ -1,3 +1,9 @@
+![npm](https://img.shields.io/npm/v/tiny-events.js.svg?color=red)
+![tree-shaking](https://badgen.net/bundlephobia/tree-shaking/tiny-events.js?color=purple)
+![types](https://badgen.net/npm/types/tiny-events.js?color=blue)
+![license](https://badgen.net/github/license/sachinchoolur/tiny-events.js)
+
+
 #### Test coverage
 
 | Statements                                                                      | Functions                                                                   | Lines                                                               |
@@ -195,5 +201,3 @@ tinyEvents('.btn').trigger('my-custom-event', {
   purpose: 'some text'
 });
 ```
-
-## MIT License
