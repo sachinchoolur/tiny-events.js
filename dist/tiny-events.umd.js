@@ -1,5 +1,5 @@
 /**
- * tiny-events.js | 0.0.1 | August 2nd 2021
+ * tiny-events.js | 1.0.0 | August 3rd 2021
  *
  * Copyright (c) 2020 Sachin Neravath
  * @license MIT
@@ -12,7 +12,7 @@
 }(this, (function () { 'use strict';
 
     /**
-     * TinyEvents is a tiny, framework-agnostic, event utility library for modern browsers(IE 11+).
+     * TinyEvents is a tiny event utility library for modern browsers(IE 11+).
      * Supports jQuery like syntax. just 1 kb gzipped.
      * Author - Sachin Neravath
      */
